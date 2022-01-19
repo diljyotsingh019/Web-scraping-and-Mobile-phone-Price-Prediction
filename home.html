@@ -1,0 +1,136 @@
+  
+  <!-- 
+NAME @: Diljyot Singh
+TOPIC @: Phone Price Prediction Model Deployment
+DATE @: 08/01/2022
+-->
+
+  
+  <!-----------------------------  BASE SECTION  ----------------------------------->
+
+{% extends "base.html"%}
+
+  <!-------------------------------------------------------------------------------->
+
+{% block content %}
+
+
+  <!---------------------------  HOME BODY SECTION   ------------------------------>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="   w3-pale-blue  w3-large">
+
+    <!-- About Container -->
+    <div class="w3-container" id="about">
+
+        <div class="w3-content" style="max-width:800px">
+
+            <h5 class="w3-center w3-padding-32"><span class="w3-tag w3-wide">ABOUT THE PROJECT</span></h5>
+            
+            <h3>Need for a Cell Phone: </h3>
+
+            <br>
+
+            <p> Cell phones are the perfect way to stay connected with others and provide the user with a sense of security. In the event of emergency, having a cell phone can allow help to reach you quickly and could possibly save lives. However, the importance of cell phones goes way beyond personal safety.
+            </p>
+
+            <br>
+
+            <h3>Cell Phone Price Prediction:</h3>
+
+            <br>
+
+            <p>
+               On the basis of the mobile specification such as Battery power, Screen Size, Product Brand, Ram, etc. we are predicting price of the mobile. This kind of prediction will help companies estimate price of mobiles to give tough competion to other mobile manufacturer. Also it will be usefull for Consumers to verify that they are paying best price for a mobile.
+            </p>
+
+
+
+        
+    
+        </div>
+    </div>
+
+<br>
+<br>
+
+  <!-----------------------------  FORM SECTIOIN  ----------------------------------->
+
+    <div class="w3-content" id="form1" style="max-width:800px" align="center">
+
+    <center>
+    <h1>Please fill out the form below</h1>
+    </center>
+    <br>
+    <hr>
+
+    <form   method="POST">
+        {# This hidden_tag is a CSRF security feature. #}
+        {{ form.hidden_tag() }}
+
+        {{ form.product.label }}{{form.product}}
+        <hr>
+
+        {{ form.scnsize.label}} {{form.scnsize}}
+        <hr>
+
+        {{form.scntype.label}} {{form.scntype}}
+        <hr>
+
+        {{form.batpower.label}} {{form.batpower}}
+        <hr>
+
+        {{form.processor.label}} {{form.processor}}
+        <hr>
+
+        {{form.ram.label}} {{form.ram}}
+        <hr>
+
+        {{form.inbuilt.label}} {{form.inbuilt}}
+        <hr>
+
+        {{form.external.label}} {{form.external}}
+        <hr>
+
+        {{form.fcam.label}} {{form.fcam}}
+        <hr>
+
+        {{form.rcam.label}} {{form.rcam}}
+        <hr>
+
+        {{form.os.label}} {{form.os}}
+
+        <hr>
+
+        Any other feedback?
+        <br>
+        {{form.addcom}}
+
+        <br>
+     
+        <hr>
+
+        <div class="w3-center">
+
+            {{ form.submit() }}
+
+        </div>
+
+       
+
+    </form>
+
+
+
+    </div>
+
+  <!----------------------------------------------------------------------------->
+
+
+
+
+</div>
+
+{% endblock %}
+
+  <!-----------------------------  THE END  ----------------------------------->

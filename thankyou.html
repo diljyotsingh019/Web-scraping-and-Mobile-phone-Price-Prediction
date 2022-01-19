@@ -1,0 +1,149 @@
+  
+  <!-- 
+NAME @: Diljyot Singh
+TOPIC @: Phone Price Prediction Model Deployment
+DATE @: 08/01/2022
+-->
+
+
+ <!----------------------------- BASE SECTION  ----------------------------------->
+
+{% extends "base.html"%}
+
+  <!------------------------------------------------------------------------------->
+
+{% block content %}
+
+
+  <!-------------------------- THANKYOU BODY SECTION ------------------------------->
+
+
+<div class=" w3-pale-yellow">
+  
+<div class="w3-center w3-padding-64">
+  <h1>Thank you. Here is the info you gave:</h1>
+  <hr>
+</div>
+
+
+<div id=table1>
+<div class="container">
+
+  <!-----------------------------  INFO TABLE   ----------------------------------->
+  
+   <table class="table table-dark table-hover">
+   <thead>
+        <tr>
+          <th>INFO</th>
+          <th>DATA</th>
+        </tr>
+      </thead>
+      
+      
+      <tbody>
+      
+        <tr>
+          <b>
+            <td> Product Brand: </td>
+              <td>{{session['product_html']}}</td>
+           </b>
+           
+        </tr>
+        
+        <tr>
+          <b>
+            <td>Screen Size in inches: </td>
+              <td> {{session['scnsize']}}</td>
+          </b>
+        </tr>
+            
+         <tr>
+          <b>
+            <td>Screen Type:</td>
+              <td>{{session['scntype_html']}}</td>
+          </b>
+        </tr>
+        
+         <tr>
+          <b>
+            <td>Battery Capacity in mAh:</td>
+              <td>{{session['batpower']}}</td>
+          </b>
+        </tr>
+        
+         <tr>
+          <b>
+            <td>Processor Brand: </td>
+              <td>{{session['processor_html']}}</td>
+  
+          </b>
+        </tr>
+        
+         <tr>
+          <b>
+            <td>RAM in GBs: </td>
+              <td>{{session['ram']}}</td>
+          </b>
+        </tr>
+        
+         <tr>
+          <b>
+            <td>Inbuilt Storage in GBs: </td>
+              <td>{{session['inbuilt']}}</td>
+          </b>
+        </tr>
+        
+         <tr>
+          <b>
+            <td>External Storage in GBs: </td>
+               <td>{{session['external']}}</td>
+          </b>
+        </tr>
+        
+         <tr>
+          <b>
+             <td>Front Camera in Megapixels:</td>
+               <td>{{session['fcam']}}</td>
+          </b>
+        </tr>
+        
+         <tr>
+          <b>
+            <td>Rear Camera in Megapixels: </td>
+              <td>{{session['rcam']}}</td>
+          </b>
+        </tr>
+        
+         <tr>
+          <b>
+            <td>Operating System: </td>
+              <td>{{session['os_html']}}</td>
+          </b>
+        </tr>
+
+    </tbody>
+    </table>
+  </div>
+  
+</div>
+
+  <!---------------------------- PREDICTION   SECTION  ---------------------------------->
+
+<div class=" w3-pale-blue w3-center">
+  <h1>
+    <hr><br>
+      Predicted Price as per above specification is ₹{{results}}
+      <br>
+  </h1>
+
+  <br>
+  <br>
+  <br>
+</div>
+
+
+</div>
+
+  {% endblock %}
+
+    <!---------------------------------  THE END  ----------------------------------------->
